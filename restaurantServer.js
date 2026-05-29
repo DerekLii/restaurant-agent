@@ -1,16 +1,10 @@
-// server.js
 import express from "express";
-import { runAgent } from "./agentOllama.js";
 import { loadRestaurants, saveRestaurants } from "./restaurantStore.js";
 
 const app = express();
 app.use(express.json());
 
 let restaurants = loadRestaurants();
-
-app.get("/restaurants", (req, res) => {
-  res.json(restaurants);
-});
 
 app.post("/restaurants", (req, res) => {
   const newRestaurant = {
@@ -33,23 +27,8 @@ app.delete("/restaurants/:id", (req, res) => {
   res.json({ message: "deleted" });
 });
 
-app.post("/chat", async (req, res) => {
-  try {
-    const message = req.body?.message;
+const PORT = 3000;
 
-    if (!message) {
-      return res.status(400).json({ error: "Message is required" });
-    }
-
-    const reply = await runAgent(message);
-
-    res.json({ reply });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Something broke" });
-  }
-});
-
-app.listen(3000, () => {
-  console.log("AI Agent running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });

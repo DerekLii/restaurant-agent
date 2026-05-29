@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Alo Restaurant",
+    "address": "163 Spadina Ave, Toronto, ON M5V 2L6",
+    "type": "Fine Dining",
+    "cuisine": ["French"],
+    "vibes": ["Elegant", "Romantic"]
+  },
+  {
+    "name": "Canoe",
+    "address": "66 Wellington St W, Toronto, ON M5K 1H6",
+    "type": "Fine Dining",
+    "cuisine": ["Canadian"],
+    "vibes": ["Elegant", "City Views"]
+  },
+  {
+    "name": "Richmond Station",
+    "address": "1 Richmond St W, Toronto, ON M5H 3W4",
+    "type": "Casual Dining",
+    "cuisine": ["Canadian"],
+    "vibes": ["Cozy", "Modern"]
+  },
+  {
+    "name": "Pai Northern Thai Kitchen",
+    "address": "18 Duncan St, Toronto, ON M5H 3G8",
+    "type": "Casual Dining",
+    "cuisine": ["Thai"],
+    "vibes": ["Lively", "Casual"]
+  },
+  {
+    "name": "Khao San Road",
+    "address": "11 Charlotte St, Toronto, ON M5V 2H5",
+    "type": "Casual Dining",
+    "cuisine": ["Thai"],
+    "vibes": ["Busy", "Street Food"]
+  },
+  {
+    "name": "Bar Isabel",
+    "address": "797 College St, Toronto, ON M6G 1C7",
+    "type": "Bar",
+    "cuisine": ["Spanish"],
+    "vibes": ["Chill", "Date Night"]
+  },
+  {
+    "name": "Bar Raval",
+    "address": "505 College St, Toronto, ON M6G 1A5",
+    "type": "Bar",
+    "cuisine": ["Spanish Tapas"],
+    "vibes": ["Lively", "Artistic"]
+  },
+  {
+    "name": "Kinka Izakaya",
+    "address": "398 Church St, Toronto, ON M5B 2A2",
+    "type": "Bar",
+    "cuisine": ["Japanese"],
+    "vibes": ["Energetic", "Social"]
+  },
+  {
+    "name": "Ramen Isshin",
+    "address": "609 Queen St W, Toronto, ON M5V 2B7",
+    "type": "Casual Dining",
+    "cuisine": ["Japanese"],
+    "vibes": ["Cozy", "Comfort Food"]
+  },
+  {
+    "name": "Ippudo Toronto",
+    "address": "81 Bloor St E, Toronto, ON M4W 1A9",
+    "type": "Casual Dining",
+    "cuisine": ["Japanese"],
+    "vibes": ["Modern", "Fast Casual"]
+  },
+  {
+    "name": "Terroni",
+    "address": "57 Adelaide St E, Toronto, ON M5C 1K6",
+    "type": "Casual Dining",
+    "cuisine": ["Italian"],
+    "vibes": ["Warm", "Traditional"]
+  },
+  {
+    "name": "Giulietta",
+    "address": "972 College St, Toronto, ON M6H 1A5",
+    "type": "Fine Dining",
+    "cuisine": ["Italian"],
+    "vibes": ["Romantic", "Minimalist"]
+  },
+  {
+    "name": "Miku Toronto",
+    "address": "10 Bay St., Toronto, ON M5J 2R8",
+    "type": "Fine Dining",
+    "cuisine": ["Japanese", "Sushi"],
+    "vibes": ["Elegant", "Waterfront"]
+  },
+  {
+    "name": "Sushi Masaki Saito",
+    "address": "88 Avenue Rd, Toronto, ON M5R 2H2",
+    "type": "Fine Dining",
+    "cuisine": ["Sushi"],
+    "vibes": ["Luxury", "Exclusive"]
+  },
+  {
+    "name": "Seven Lives Tacos",
+    "address": "72 Kensington Ave, Toronto, ON M5T 2K2",
+    "type": "Street Food",
+    "cuisine": ["Mexican"],
+    "vibes": ["Casual", "Busy"]
+  },
+  {
+    "name": "Maker Pizza",
+    "address": "Multiple locations, Toronto",
+    "type": "Casual Dining",
+    "cuisine": ["Pizza"],
+    "vibes": ["Fun", "Casual"]
+  },
+  {
+    "name": "Pizzeria Libretto",
+    "address": "155 University Ave, Toronto, ON M5H 3B7",
+    "type": "Casual Dining",
+    "cuisine": ["Pizza", "Italian"],
+    "vibes": ["Warm", "Authentic"]
+  },
+  {
+    "name": "Scaramouche Restaurant",
+    "address": "1 Benvenuto Pl, Toronto, ON M4V 2L1",
+    "type": "Fine Dining",
+    "cuisine": ["French"],
+    "vibes": ["Romantic", "City View"]
+  },
+  {
+    "name": "Byblos Toronto",
+    "address": "11 Duncan St, Toronto, ON M5V 3M2",
+    "type": "Casual Dining",
+    "cuisine": ["Middle Eastern"],
+    "vibes": ["Stylish", "Warm"]
+  },
+  {
+    "name": "The Carbon Bar",
+    "address": "99 Queen St E, Toronto, ON M5C 1S1",
+    "type": "Bar",
+    "cuisine": ["BBQ"],
+    "vibes": ["Lively", "Industrial"]
+  }
+]

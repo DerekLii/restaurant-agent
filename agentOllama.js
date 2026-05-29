@@ -1,6 +1,20 @@
-import { restaurants } from "./restaurants.js";
+import { loadRestaurants } from "./restaurantStore.js";
 
 const OLLAMA_URL = "http://localhost:11434/api/chat";
+
+function normalize(str = "") {
+  return str.toLowerCase().trim();
+}
+
+let restaurants = loadRestaurants();
+
+let messages = [
+  {
+    role: "system",
+    content: "You are a restaurant assistant that remembers conversation context."
+  }
+];
+
 
 /*
 ====================================================
@@ -40,8 +54,8 @@ User message: "${userMessage}"
 
 Format:
 {
-  "mood": "romantic | casual | fancy | fastfood",
-  "food": "italian | pizza | sushi | burger",
+  "cuisine": "romantic | casual | fancy | fastfood",
+  "vibes": "italian | pizza | sushi | burger",
   "intent": "restaurant_search"
 }
 `;
@@ -75,8 +89,8 @@ function rankRestaurants(intent) {
     .map(r => {
       let score = r.rating;
 
-      if (r.vibe.includes(intent.mood)) score += 1.5;
-      if (r.cuisine.includes(intent.food)) score += 1;
+      if (r.cuisine.includes(intent.cuisine)) score += 1.5;
+      if (r.vibes.includes(intent.vibes)) score += 1;
 
       return { ...r, score };
     })
@@ -113,12 +127,27 @@ Give a short friendly recommendation in 2-3 sentences.
 export async function runAgent(userMessage) {
   console.log("🚀 Running Llama agent pipeline...");
 
+  // 1. store user message in memory
+  messages.push({
+    role: "user",
+    content: userMessage
+  });
+
+  // 2. intent extraction still works normally
   const intent = await extractIntent(userMessage);
   console.log("🎯 Intent:", intent);
 
   const ranked = rankRestaurants(intent);
   console.log("🏆 Top:", ranked[0]);
 
+  // 3. generate reply (you can still use ranked results)
   const reply = await generateFinalAnswer(userMessage, ranked);
 
-  return reply;}
+  // 4. store assistant response in memory
+  messages.push({
+    role: "assistant",
+    content: reply
+  });
+
+  return reply;
+}
